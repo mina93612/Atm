@@ -17,7 +17,7 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity {
     boolean logon =false;
     private static final  int REQUEST_CODE_LOGIN=110;
-
+    private  PokerCard card;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
