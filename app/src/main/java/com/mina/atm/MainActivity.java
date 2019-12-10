@@ -15,8 +15,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
-    private static final  int REQUEST_CODE_LOGIN=21;
     boolean logon =false;
+    private static final  int REQUEST_CODE_LOGIN=110;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(login);
             startActivityForResult(login,REQUEST_CODE_LOGIN);
 
-        }else logon = true;
+        }
     }
 
     @Override
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             if (requestCode ==REQUEST_CODE_LOGIN){
                 if (resultCode !=RESULT_OK);
                 finish();
-            }
+            }else logon = true;
         }
     }
 
